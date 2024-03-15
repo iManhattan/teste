@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<AreaRedundante>
+  <ActivePrg>885</ActivePrg>
+  <CheckLanguages>18</CheckLanguages>
+  <Alarms>169</Alarms>
+  <CheckProfibusIOs>28</CheckProfibusIOs>
+  <PidGenerator>22</PidGenerator>
+  <IncrRedData>192</IncrRedData>
+  <CheckSoe>32</CheckSoe>
+  <StateChange>29</StateChange>
+  <CheckRecipe>187</CheckRecipe>
+  <ProfibusStateChange>22</ProfibusStateChange>
+  <CheckNVL>684</CheckNVL>
+  <POU_CFC_1000>2002</POU_CFC_1000>
+  <POU_CFC>292</POU_CFC>
+  <POU_FBD>125</POU_FBD>
+  <POU_IL>102</POU_IL>
+  <POU_LD>125</POU_LD>
+  <POU_SFC>91</POU_SFC>
+  <Recursividade>280</Recursividade>
+  <PIDControl>200</PIDControl>
+  <Iec104Server>474</Iec104Server>
+  <SpecialVariablesRedundantPrg>4</SpecialVariablesRedundantPrg>
+  <Special_Variables_Redundant>9</Special_Variables_Redundant>
+  <Disables>6</Disables>
+  <Languages>9</Languages>
+  <PIDs>12</PIDs>
+  <QuantityOfVariables>20000</QuantityOfVariables>
+  <Symbolics>133133</Symbolics>
+  <Recipe>6</Recipe>
+  <ImportExportOnline>313</ImportExportOnline>
+  <NVL_Sender_BroadCast_for_all>12</NVL_Sender_BroadCast_for_all>
+  <NVL_Sender_JIGA03_Exclusive_to_JIGA01>2</NVL_Sender_JIGA03_Exclusive_to_JIGA01>
+  <NVL_Sender_JIGA03_Exclusive_to_JIGA02>2</NVL_Sender_JIGA03_Exclusive_to_JIGA02>
+  <NVL_Sender_JIGA03_Exclusive_to_JIGA05>2</NVL_Sender_JIGA03_Exclusive_to_JIGA05>
+  <NVL_Sender_JIGA03_Exclusive_to_JIGA07>2</NVL_Sender_JIGA03_Exclusive_to_JIGA07>
+  <Mask>1</Mask>
+  <PersistentVars>12318</PersistentVars>
+  <MB0>49152</MB0>
+  <IB0>65536</IB0>
+  <QB0>65536</QB0>
+  <QB65536>2048</QB65536>
+</AreaRedundante>

@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Symbolconfiguration xmlns="http://www.3s-software.com/schemas/Symbolconfiguration.xsd">
+  <Header>
+    <Version>3.5.14.0</Version>
+    <SymbolConfigObject version="4.4.0.0" runtimeid="3.5.18.40" libversion="4.4.0.0" compiler="3.5.18.50" lmm="3.5.18.60" profile="MasterTool IEC XE" settings="LayoutCalculator=OptimizedClientSideLayoutCalculator" />
+    <ProjectInfo name="NTP145_JIGA01_CPU_NX3010_0001" devicename="Device" appname="Application" />
+  </Header>
+  <TypeList>
+    <TypeSimple name="T_BOOL" size="1" swapsize="0" typeclass="Bool" iecname="BOOL" />
+    <TypeSimple name="T_BYTE" size="1" swapsize="1" typeclass="Byte" iecname="BYTE" />
+    <TypeSimple name="T_DINT" size="4" swapsize="4" typeclass="DInt" iecname="DINT" />
+    <TypeSimple name="T_DWORD" size="4" swapsize="4" typeclass="DWord" iecname="DWORD" />
+    <TypeSimple name="T_INT" size="2" swapsize="2" typeclass="Int" iecname="INT" />
+    <TypeSimple name="T_LWORD" size="8" swapsize="8" typeclass="LWord" iecname="LWORD" />
+    <TypeSimple name="T_STRING" size="81" swapsize="0" typeclass="String" iecname="STRING" />
+    <TypeSimple name="T_TIME" size="4" swapsize="4" typeclass="Time" iecname="TIME" />
+    <TypeSimple name="T_UINT" size="2" swapsize="2" typeclass="UInt" iecname="UINT" />
+    <TypeSimple name="T_WORD" size="2" swapsize="2" typeclass="Word" iecname="WORD" />
+    <TypeArray name="T_ARRAY__0__3__OF_BYTE" size="4" nativesize="4" typeclass="Array" iecname="ARRAY [0..3] OF BYTE" basetype="T_BYTE">
+      <ArrayDim minrange="0" maxrange="3" />
+    </TypeArray>
+    <TypeUserDef name="T_Firmware" size="14" nativesize="16" typeclass="Userdef" pouclass="STRUCTURE" iecname="Firmware">
+      <UserDefElement iecname="dwFirmwareVersion" type="T_DWORD" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiSlaveAddress" type="T_UINT" byteoffset="4" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="dwProductID" type="T_DWORD" byteoffset="8" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="iIndex" type="T_INT" byteoffset="12" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_NVL_Result" size="22" nativesize="24" typeclass="Userdef" pouclass="STRUCTURE" iecname="NVL_Result">
+      <UserDefElement iecname="iTempoMinimo" type="T_INT" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="iTempoMedio" type="T_INT" byteoffset="2" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="iTempoMaximo" type="T_INT" byteoffset="4" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="lwQtdTotalComunicacoes" type="T_LWORD" byteoffset="8" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="wQtdComMaior3segundos" type="T_WORD" byteoffset="16" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="wQtdComMaior4segundos" type="T_WORD" byteoffset="18" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="wQtdComMaior5segundos" type="T_WORD" byteoffset="20" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Firmware_CPU" size="16" nativesize="16" typeclass="Userdef" pouclass="STRUCTURE" iecname="Firmware_CPU">
+      <UserDefElement iecname="abyCPUVersion" type="T_ARRAY__0__3__OF_BYTE" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="abyBootloaderVersion" type="T_ARRAY__0__3__OF_BYTE" byteoffset="4" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="abyProcAuxVersion" type="T_ARRAY__0__3__OF_BYTE" byteoffset="8" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="dwCPUModel" type="T_DWORD" byteoffset="12" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+  </TypeList>
+  <NodeList>
+    <Node name="Application">
+      <Node name="CheckNVL">
+        <Node name="JIGA01" type="T_NVL_Result" access="Read" />
+        <Node name="JIGA02" type="T_NVL_Result" access="Read" />
+        <Node name="JIGA03" type="T_NVL_Result" access="Read" />
+        <Node name="JIGA05" type="T_NVL_Result" access="Read" />
+        <Node name="JIGA07" type="T_NVL_Result" access="Read" />
+      </Node>
+      <Node name="PersistentVars">
+        <Node name="bActiveDiag" type="T_BOOL" access="Read" />
+        <Node name="bCheckForcingBoolVar" type="T_BOOL" access="Read" />
+        <Node name="bCheckForcingWordVar" type="T_WORD" access="Read" />
+        <Node name="bEnableCleanStats" type="T_BOOL" access="ReadWrite" />
+        <Node name="bFailNVLCommunicationJIGA02" type="T_BOOL" access="Read" />
+        <Node name="bFailNVLCommunicationJIGA03" type="T_BOOL" access="Read" />
+        <Node name="bFailNVLCommunicationJIGA05" type="T_BOOL" access="Read" />
+        <Node name="bFailNVLCommunicationJIGA07" type="T_BOOL" access="Read" />
+        <Node name="bFailureDetected" type="T_BOOL" access="Read" />
+        <Node name="bForcing" type="T_BOOL" access="Read" />
+        <Node name="bLocalIOs" type="T_BOOL" access="Read" />
+        <Node name="bModbus5" type="T_BOOL" access="Read" />
+        <Node name="bModbus6" type="T_BOOL" access="Read" />
+        <Node name="bModbus7" type="T_BOOL" access="Read" />
+        <Node name="bProfibusIOs" type="T_BOOL" access="Read" />
+        <Node name="bRam" type="T_BOOL" access="Read" />
+        <Node name="bRecipeManager" type="T_BOOL" access="Read" />
+        <Node name="bSNTP" type="T_BOOL" access="Read" />
+        <Node name="bStartTest" type="T_BOOL" access="ReadWrite" />
+        <Node name="bUserLog" type="T_BOOL" access="Read" />
+        <Node name="dwInstFreeRam" type="T_DWORD" access="Read" />
+        <Node name="dwMainTaskAvgScanTime" type="T_DWORD" access="Read" />
+        <Node name="dwMainTaskCurScanTime" type="T_DWORD" access="Read" />
+        <Node name="dwMainTaskLoadAvg" type="T_DWORD" access="Read" />
+        <Node name="dwMainTaskLoadMax" type="T_DWORD" access="Read" />
+        <Node name="dwMainTaskLoadMin" type="T_DWORD" access="Read" />
+        <Node name="dwMainTaskMaxFirstScanTime" type="T_DWORD" access="Read" />
+        <Node name="dwMainTaskMaxScanTime" type="T_DWORD" access="Read" />
+        <Node name="dwMainTaskMinScanTime" type="T_DWORD" access="Read" />
+        <Node name="dwMaxFreeRam" type="T_DWORD" access="Read" />
+        <Node name="dwMinFreeRam" type="T_DWORD" access="Read" />
+        <Node name="tElapsedTime" type="T_TIME" access="Read" />
+      </Node>
+      <Node name="ReadHwVersions">
+        <Node name="eR00S02_NX3010" type="T_Firmware_CPU" access="Read" />
+        <Node name="eR00S04_NX5001" type="T_Firmware" access="Read" />
+        <Node name="eR00S06_NX2020" type="T_Firmware" access="Read" />
+        <Node name="eR00S08_NX1001" type="T_Firmware" access="Read" />
+        <Node name="eR00S09_NX2001" type="T_Firmware" access="Read" />
+        <Node name="eR00S10_NX4000" type="T_Firmware" access="Read" />
+        <Node name="eR16S02_NX1005" type="T_Firmware" access="Read" />
+        <Node name="eR16S03_NX6010" type="T_Firmware" access="Read" />
+        <Node name="eR16S04_NX6020" type="T_Firmware" access="Read" />
+        <Node name="eR16S08_NX4000" type="T_Firmware" access="Read" />
+        <Node name="eR16S10_NX4000" type="T_Firmware" access="Read" />
+        <Node name="eR31S02_NX6100" type="T_Firmware" access="Read" />
+        <Node name="eR31S03_NX6000" type="T_Firmware" access="Read" />
+        <Node name="eR31S04_NX6100" type="T_Firmware" access="Read" />
+        <Node name="eR31S06_NX4000" type="T_Firmware" access="Read" />
+      </Node>
+      <Node name="StartPrg">
+        <Node name="strCPUTargetVersion" type="T_STRING" access="Read" />
+        <Node name="strProjectName" type="T_STRING" access="Read" />
+        <Node name="strProjectVersion" type="T_STRING" access="Read" />
+      </Node>
+      <Node name="Symbolics">
+        <Node name="bDaylightSavingTime" type="T_BOOL" access="Read" />
+      </Node>
+      <Node name="UserPrg">
+        <Node name="DG_NX3010_tDetailed_Thermometer_diTemperature" type="T_DINT" access="Read" />
+      </Node>
+    </Node>
+  </NodeList>
+</Symbolconfiguration>

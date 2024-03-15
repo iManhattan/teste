@@ -1,0 +1,12 @@
+Diário de Bordo - Super Teste Jiga 04 NX3030
+Registro de Bugs e Atualizações
+Os registro devem ser feito do mais recente para o mais antigo.
+
+Modelo de registro:
+
+Data: XX/XX/XXXX Hora: XX:XX Autor: XXXXXX XXXXXXX XXXXXXX
+Registro:
+-> XXXXXXXXXXXXXXXXX
+-> XXXXXXXXXXXXXXXXX
+
+Anotações dos Bugs Encontrados e Alterações de Firmware/Projeto:
